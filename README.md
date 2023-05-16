@@ -1,4 +1,4 @@
-# FoodEx
+# FoodX
 
 ## Overview
 Food Expert is a web app that simplifies cooking by generating personalized recipes based on the ingredients you already have. With a user-friendly interface, input ingredients you have on hand, and the AI-powered system will generate a recipe suggestion.
@@ -13,4 +13,4 @@ Food Expert is a web app that simplifies cooking by generating personalized reci
 
 
 ## Data Modeling
-![FoodEx Data Model](readme_img/data_modeling.png)
+![FoodX Data Model](readme_img/data_modeling.png)
