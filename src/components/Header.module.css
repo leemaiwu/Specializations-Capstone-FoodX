@@ -8,10 +8,10 @@
     align-items: center;
     justify-content: center;
     gap: 15px;
-    height: 150px;
+    height: 115px;
     opacity: 0;
     animation: fadeIn 2s ease-in-out forwards;
-    margin-top: 12vw;
+    margin-top: 17vw;
 }
 
 @keyframes fadeIn {
@@ -54,6 +54,22 @@
     font-size: 2.7rem;
     letter-spacing: 1px;
     font-family: 'Gruppo', 'Comfortaa';
+    /* font-family: 'Comfortaa', cursive; */
     font-weight: 700;
+    margin: 0;
 }
 
+/* .about {
+    display: flex;
+    justify-content: center;
+    font-family: 'Comfortaa', cursive;
+    font-stretch: expanded;
+    margin: 0;
+    color: rgb(165, 165, 165);
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.561);
+    margin-bottom: 15px;
+}
+
+.about p {
+    margin: 0;
+} */
