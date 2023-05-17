@@ -1,78 +1,81 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
 
 .inputsection {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  animation: fadeIn 1s ease-in-out 1s forwards;
-  opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 1s ease-in-out 1s forwards;
+    opacity: 0;
 }
 
 @keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(-1px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    0% {
+        opacity: 0;
+        transform: translateY(-1px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .inputsection:focus-within .searchinput, .searchinput:hover {
-  background-color: rgb(39, 39, 39);
-  border: 1px solid rgb(39, 39, 39);
+    background-color: rgb(39, 39, 39);
+    border: 1px solid rgb(39, 39, 39);
 }
 
 .searchinput {
-  display: flex;
-  box-sizing: border-box;
-  align-items: center;
-  border: 1px solid rgb(109, 109, 109);
-  padding: 2px 13px;
-  border-radius: 20px;
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    border: 1px solid rgb(109, 109, 109);
+    padding: 2px 13px;
+    border-radius: 20px;
 }
 
 .input {
-  width: 380px;
-  height: 30px;
-  background: transparent;
-  color: white;
-  border: none;
-  padding: 0px 8px;
-  border-radius: 20px;
-  font-size: 1rem;
-  font-family: 'Poppins', 'Comfortaa';
+    width: 380px;
+    height: auto;
+    min-height: 35px;
+    background: transparent;
+    color: white;
+    border: none;
+    padding: 0px 9px;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-family: 'Poppins', 'Comfortaa';
 }
 
 input:focus {
-  outline: none;
+    outline: none;
 }
 
 .buttons {
-  display: flex;
-  justify-content: center;
-  margin: 0px;
+    display: flex;
+    justify-content: center;
+    margin: 0px;
 }
 
 .searchbtn {
-  border: none;
-  background: transparent;
-  font-size: 1rem;
-  color: rgb(185, 185, 185);
-  font-family: 'Poppins', 'Comfortaa';
+    border: none;
+    background: transparent;
+    font-size: 1rem;
+    color: rgb(185, 185, 185);
+    padding: 0px;
+    font-family: 'Poppins', 'Comfortaa';
 }
 
 .searchbtn:hover {
-  cursor: pointer;
-  color: rgb(226, 226, 226);
+    cursor: pointer;
+    color: rgb(226, 226, 226);
 }
 
 @media screen and (max-width: 400px) {
-  .input {
-    width: 290px;
-  }
-  .buttons {
-    display: none;
-  }
+    .input {
+        width: 290px;
+    }
+
+    .buttons {
+        display: none;
+    }
 }

@@ -14,12 +14,9 @@ function Header() {
     return (
         <div>
             <div ref={headerRef} className={styles.header} >
-                <FaGripfire size='50' className={styles.icon} />
+                <FaGripfire className={styles.icon} />
                 <h1 className={styles.title} >FoodX</h1>
             </div>
-            {/* <div className={styles.about}>
-                <p>What are we cooking with today</p>
-            </div> */}
         </div>
     )
 }

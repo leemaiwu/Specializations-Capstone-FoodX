@@ -1,9 +1,25 @@
-import { useRef } from "react"
+import { useRef, useState, useEffect } from "react"
 import styles from "./Input.module.css"
 import { IoSearchOutline } from "react-icons/io5"
 
 function Input() {
+
   const inputRef = useRef(null)
+  const [currentTextIndex, setCurrentTextIndex] = useState(0)
+
+  const placeholderPhrases = [
+    'e.g. eggs, milk, flour',
+    'What are we cooking with today?'
+  ]
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setCurrentTextIndex((prevIndex) =>
+        prevIndex === 0 ? 1 : 0
+      )
+    }, 3000)
+    return () => clearTimeout(timeout)
+  }, [currentTextIndex])
 
   return (
     <div className={styles.inputsection}>
@@ -13,7 +29,7 @@ function Input() {
           <input
             ref={inputRef}
             type="text"
-            placeholder="e.g. eggs, milk, flour"
+            placeholder={placeholderPhrases[currentTextIndex]}
             className={styles.input}
             required
           ></input>
