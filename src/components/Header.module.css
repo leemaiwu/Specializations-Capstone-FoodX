@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;700&family=Gruppo&display=swap');
+
+.header {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    height: 150px;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+    margin-top: 12vw;
+}
+
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .icon {
+    background: linear-gradient(to bottom, rgb(0, 0, 0), rgb(0, 0, 0), rgb(0, 0, 0), rgb(255, 210, 210));
+    border-radius: 50px;
+    animation: colorRotation 6s ease-in-out infinite;
+    transition: background 1s ease-in-out;
+  }
+  
+  @keyframes colorRotation {
+    0% {
+        background: linear-gradient(to bottom, rgb(0, 0, 0), rgb(0, 0, 0), rgb(0, 0, 0), rgb(255, 210, 210));
+    }
+    25% {
+        background: linear-gradient(to bottom, rgb(0, 0, 0), rgb(0, 0, 0), rgb(0, 0, 0), rgb(255, 243, 210));
+    }
+    50% {
+        background: linear-gradient(to bottom, rgb(0, 0, 0), rgb(0, 0, 0), rgb(0, 0, 0), rgb(210, 249, 255));
+    }
+    75% {
+        background: linear-gradient(to bottom, rgb(0, 0, 0), rgb(0, 0, 0), rgb(0, 0, 0), rgb(205, 216, 255));
+    }
+    100% {
+        background: linear-gradient(to bottom, rgb(0, 0, 0), rgb(0, 0, 0), rgb(0, 0, 0), rgb(232, 210, 255));
+    }
+  }
+
+.title {
+    font-size: 2.7rem;
+    letter-spacing: 1px;
+    font-family: 'Gruppo', 'Comfortaa';
+    font-weight: 700;
+}
+
