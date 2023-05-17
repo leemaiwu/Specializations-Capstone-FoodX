@@ -1,14 +1,9 @@
-import { useEffect, useRef } from "react"
+import { useRef } from "react"
 import styles from "./Input.module.css"
 import { IoSearchOutline } from "react-icons/io5"
 
 function Input() {
   const inputRef = useRef(null)
-
-  useEffect(() => {
-    const inputElement = inputRef.current
-    inputElement.focus()
-  }, [])
 
   return (
     <div className={styles.inputsection}>
