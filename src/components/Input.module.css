@@ -36,7 +36,7 @@
 .input {
     width: 380px;
     height: auto;
-    min-height: 35px;
+    height: 33px;
     background: transparent;
     color: white;
     border: none;
@@ -54,6 +54,7 @@ input:focus {
     display: flex;
     justify-content: center;
     margin: 0px;
+    text-decoration: none;
 }
 
 .searchbtn {

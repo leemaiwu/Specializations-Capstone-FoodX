@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react'
-import styles from './Header.module.css'
 import { FaGripfire } from "react-icons/fa"
+import styles from './Header.module.css'
 
 function Header() {
 

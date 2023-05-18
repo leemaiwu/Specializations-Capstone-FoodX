@@ -1,6 +1,7 @@
 import { useRef, useState, useEffect } from "react"
-import styles from "./Input.module.css"
 import { IoSearchOutline } from "react-icons/io5"
+import { Link } from 'react-router-dom'
+import styles from "./Input.module.css"
 
 function Input() {
 
@@ -33,9 +34,9 @@ function Input() {
             className={styles.input}
             required
           ></input>
-        <div className={styles.buttons}>
+        <Link to='/recipe' className={styles.buttons}>
             <button type="submit" className={styles.searchbtn}>Go</button>
-        </div>
+        </Link>
         </div>
       </form>
     </div>
