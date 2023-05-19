@@ -1,12 +1,18 @@
+import { Outlet } from 'react-router-dom'
+
 import Header from '../components/Header'
 import Input from '../components/Input'
+import styles from './RootLayout.module.css'
 
 function RootLayout() {
 
   return (
     <>
-      <Header />
-      <Input />
+      <div className={styles.mainLayout}>
+        <Header />
+        <Input />
+      </div>
+      <Outlet />
     </>
   )
 }

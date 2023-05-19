@@ -1,16 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
-
 .backdrop {
-    position: absolute;
-    width: 100%;
-    height: 100vh;
+    position: fixed;
     top: 0;
     left: 0;
+    width: 100%;
+    height: 100vh;
     background-color: black;
     z-index: 1;
 }
 
-.recipeCard {
+.modal {
+    border: none;
+    border-radius: 6px;
+    background-color: transparent;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    padding: 0;
+    overflow: hidden;
+    z-index: 1;
+  }
+
+/* .modal {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,53 +34,4 @@
     border-radius: 30px;
     background-color: rgba(255, 255, 255, 0.125);
     z-index: 1;
-}
-
-.ingredients {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    width: 100%;
-}
-
-.buttons {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 20px;
-    margin: 10px 0px;
-    /* padding: 0 50px; */
-    width: 100%;
-    font-family: 'Poppins';
-}
-
-.pdfBtn {
-    background-color: transparent;
-    border: 1px solid rgb(109, 109, 109);
-    background-color: rgba(255, 255, 255, 0.057);
-    color: rgb(193, 193, 193);
-    font-size: 1rem;
-    border-radius: 20px;
-    padding: 8px 18px;
-}
-
-.pdfBtn:hover {
-    cursor: pointer;
-    color: rgb(255, 255, 255);
-    background-color: rgba(255, 255, 255, 0.125);
-}
-
-.closeBtn {
-    color: rgb(193, 193, 193);
-    font-size: 1rem;
-    padding: 5px 0px;
-    font-family: 'Poppins';
-    text-decoration: none;
-}
-
-.closeBtn:hover {
-    cursor: pointer;
-    color: rgb(255, 255, 255);
-    /* text-decoration: underline;
-    text-decoration-color: rgb(109, 109, 109); */
-}
+} */
