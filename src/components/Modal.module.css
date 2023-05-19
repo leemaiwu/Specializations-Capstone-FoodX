@@ -6,6 +6,7 @@
     height: 100vh;
     background-color: black;
     z-index: 1;
+    overflow: hidden;
 }
 
 .modal {
@@ -14,6 +15,7 @@
     background-color: transparent;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     padding: 0;
+    padding-bottom: 100px;
     overflow: hidden;
     z-index: 1;
   }
