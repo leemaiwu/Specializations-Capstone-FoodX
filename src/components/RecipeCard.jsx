@@ -19,39 +19,28 @@ function RecipeCard() {
     pdf.setFont('helvetica', 'normal')
     pdf.setTextColor(0, 0, 0)
   
-    const elements = section.getElementsByTagName('*')
-    let currentY = 20
+    const elements = Array.from(section.querySelectorAll('p, ul li'))
     const lines = []
   
-    for (let i = 0; i < elements.length; i++) {
-      const element = elements[i]
+    elements.forEach((element) => {
       const tagName = element.tagName.toLowerCase()
+      const text = element.textContent.trim()
   
-      if (tagName === 'p') {
-        const text = element.textContent.trim()
-        if (text !== '') {
-          const wrappedLines = pdf.splitTextToSize(text, 180)
-          lines.push(...wrappedLines)
-        }
-      } else if (tagName === 'ul') {
-        const listItems = element.getElementsByTagName('li')
-        for (let j = 0; j < listItems.length; j++) {
-          const listItem = listItems[j]
-          const listItemText = listItem.textContent.trim()
-          if (listItemText !== '') {
-            lines.push(listItemText)
-          }
-        }
+      if (tagName === 'p' && text !== '') {
+        const wrappedLines = pdf.splitTextToSize(text, 180)
+        lines.push(...wrappedLines, '')
+      } else if (tagName === 'li' && text !== '') {
+        lines.push(text)
       }
-    }
+    })
   
-    pdf.text(lines, 10, currentY)
+    pdf.text(lines, 10, 20)
     pdf.save('foodx_recipe.pdf')
   }
 
   return (
     <Modal>
-        <section ref={sectionRef} className={styles.recipeCard}>
+        <section ref={sectionRef} className={styles.recipeCard} >
           <p>How about making a flavorful and healthy Tofu Stir-Fry with Broccoli? Here's the recipe:</p>
           <p>Ingredients:</p>
           <ul className={styles.ingredients}>
