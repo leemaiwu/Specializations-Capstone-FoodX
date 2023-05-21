@@ -8,24 +8,25 @@ import styles from './RecipeCard.module.css'
 
 function RecipeCard() {
 
-  const sectionRef = useRef(null)
+  const sectionRef = useRef()
 
   const handleDownload = () => {
+    
     const section = sectionRef.current
     if (!section) return
-  
-    const pdf = new jsPDF()
+
+    const pdf = jsPDF()
     pdf.setFontSize(12)
-    pdf.setFont('helvetica', 'normal')
+    pdf.setFont('hellvetica', 'normal')
     pdf.setTextColor(0, 0, 0)
-  
-    const elements = Array.from(section.querySelectorAll('p, ul li'))
+
+    const elements = Array.from(section.querySelectorAll('p, ul, li'))
     const lines = []
-  
-    elements.forEach((element) => {
-      const tagName = element.tagName.toLowerCase()
-      const text = element.textContent.trim()
-  
+
+    elements.forEach((e) => {
+      const tagName = e.tagName.toLowerCase()
+      const text = e.textContent.trim()
+
       if (tagName === 'p' && text !== '') {
         const wrappedLines = pdf.splitTextToSize(text, 180)
         lines.push(...wrappedLines, '')
@@ -33,7 +34,7 @@ function RecipeCard() {
         lines.push(text)
       }
     })
-  
+    
     pdf.text(lines, 10, 20)
     pdf.save('foodx_recipe.pdf')
   }
