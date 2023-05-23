@@ -1,13 +1,16 @@
 import { Outlet } from 'react-router-dom'
-import { useState } from 'react'
+import { useState, useContext } from 'react'
 
 import Header from '../components/Header'
 import Input from '../components/Input'
 import styles from './RootLayout.module.css'
+import RecipeContext from '../context/RecipeContext'
 
 function RootLayout() {
 
   const [ingredientInput, setIngredientInput] = useState('')
+
+  const { setRecipeResponse } = useContext(RecipeContext)
 
   const submitHandler = async (e) => {
     console.log(ingredientInput)
@@ -26,6 +29,7 @@ function RootLayout() {
         const data = await response.json()
         console.log(data)
         setIngredientInput('')
+        setRecipeResponse(data.error.message)
     } catch (error) {
         console.log(error)
     }
@@ -35,7 +39,11 @@ function RootLayout() {
     <>
       <div className={styles.mainLayout}>
         <Header />
-        <Input ingredientInput={ingredientInput} submitHandler={submitHandler} setIngredientInput={setIngredientInput} />
+        <Input 
+          ingredientInput={ingredientInput} 
+          submitHandler={submitHandler} 
+          setIngredientInput={setIngredientInput} 
+        />
       </div>
       <Outlet />
     </>

@@ -1,12 +1,15 @@
 import RecipeCard from '../components/RecipeCard'
+import { useParams } from 'react-router-dom'
 import styles from './Recipe.module.css'
 
-function Recipe() {
+function Recipe({recipeResponse}) {
+
+    const { ingredientInput } = useParams()
 
     return (
         <>
             <div className={styles.recipeLayout}>
-                <RecipeCard />
+                <RecipeCard ingredientInput={ingredientInput} recipeResponse={recipeResponse} />
             </div>
         </>
     )

@@ -1,14 +1,17 @@
-import { useRef } from 'react'
+import { useRef, useContext } from 'react'
 import { Link } from 'react-router-dom'
 import jsPDF from 'jspdf'
 import 'jspdf-autotable'
 
+import RecipeContext from '../context/RecipeContext'
 import Modal from './Modal'
 import styles from './RecipeCard.module.css'
 
-function RecipeCard() {
+function RecipeCard({ingredientInput}) {
 
   const sectionRef = useRef()
+
+  const {recipeResponse} = useContext(RecipeContext)
 
   const handleDownload = () => {
     
@@ -42,6 +45,8 @@ function RecipeCard() {
   return (
     <Modal>
         <section ref={sectionRef} className={styles.recipeCard} >
+          <p>{`Recipe for: ${ingredientInput}`}</p>
+          <p>{`ChatGPT: ${recipeResponse}`}</p>
           <p>How about making a flavorful and healthy Tofu Stir-Fry with Broccoli? Here's the recipe:</p>
           <p>Ingredients:</p>
           <ul className={styles.ingredients}>

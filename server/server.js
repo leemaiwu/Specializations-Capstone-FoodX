@@ -10,23 +10,21 @@ app.use(cors())
 
 require('dotenv').config()
 
-const sentChat = 'flour, milk, quick oats, peanut butter, frozen berries'
-
 app.post('/completions', async (req, res) => {
     const options = {
         method: 'POST',
         headers: {
             'Authorization': `Bearer ${process.env.API_KEY}`,
-            'Content-Type': 'application/json',
+            'Content-Type': 'application/json'
         },
         body: JSON.stringify({
             model: 'gpt-3.5-turbo',
             messages: [{
                 role: 'user',
-                content: `You are a master chef who knows dishes from all around the world. I will provide you with ingredients that I have on hand and you will provide a recipe for a delicious dish from the list of ingredients I provide. You do not have to use everything from my list. But you will provide the quantity for the ingredients, detailed directions, prep and cook time, and how the dish serves. \n ${sentChat}`,
+                content: req.body.message
             }],
             max_tokens: 100,
-            n: 1,
+            n: 1
         })
     }
     try {

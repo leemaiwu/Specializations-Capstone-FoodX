@@ -31,7 +31,7 @@ function Input({ ingredientInput, submitHandler, setIngredientInput }) {
       setTimeout(() => setEmptyInput(false), 3000)
     } else {
       submitHandler()
-      navigate('/recipe')
+      navigate('/recipe/' + encodeURIComponent(ingredientInput))
     }
   }
 
@@ -55,7 +55,7 @@ function Input({ ingredientInput, submitHandler, setIngredientInput }) {
         </div>
       </form>
       {emptyInput && (
-        <p className={styles.errorBox}>Please enter ingredients</p>
+        <p className={styles.errorBox}>Oops! Missing Ingredients</p>
       )}
     </div>
   )
