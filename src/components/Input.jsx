@@ -55,7 +55,7 @@ function Input({ ingredientInput, submitHandler, setIngredientInput }) {
         </div>
       </form>
       {emptyInput && (
-        <p className={styles.errorBox}>Oops! Missing ingredients</p>
+        <p className={styles.errorBox}>Please enter ingredients</p>
       )}
     </div>
   )
