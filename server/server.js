@@ -11,6 +11,7 @@ app.use(cors())
 require('dotenv').config()
 
 app.post('/completions', async (req, res) => {
+    console.log(req.body.message)
     const options = {
         method: 'POST',
         headers: {
@@ -23,7 +24,6 @@ app.post('/completions', async (req, res) => {
                 role: 'user',
                 content: req.body.message
             }],
-            max_tokens: 100,
             n: 1
         })
     }
