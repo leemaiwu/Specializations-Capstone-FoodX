@@ -6,3 +6,9 @@
     height: 100%;
     padding-top: 230px;
 }
+
+@media screen and (max-width: 400px) {
+    .mainLayout {
+    padding-top: 200px;
+  }
+}

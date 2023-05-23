@@ -1,12 +1,14 @@
 import { useRef, useState, useEffect } from "react"
 import { IoSearchOutline } from "react-icons/io5"
-import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import styles from "./Input.module.css"
 
-function Input() {
+function Input({ ingredientInput, submitHandler, setIngredientInput }) {
 
   const inputRef = useRef(null)
   const [currentTextIndex, setCurrentTextIndex] = useState(0)
+  const [emptyInput, setEmptyInput] = useState(false)
+  const navigate = useNavigate()
 
   const placeholderPhrases = [
     'e.g. eggs, milk, flour',
@@ -22,9 +24,20 @@ function Input() {
     return () => clearTimeout(timeout)
   }, [currentTextIndex])
 
+  const emptyHandler = (e) => {
+    e.preventDefault()
+    if (ingredientInput === '') {
+      setEmptyInput(true)
+      setTimeout(() => setEmptyInput(false), 3000)
+    } else {
+      submitHandler()
+      navigate('/recipe')
+    }
+  }
+
   return (
     <div className={styles.inputsection}>
-      <form>
+      <form onSubmit={emptyHandler}>
         <div className={styles.searchinput}>
           <IoSearchOutline size={23} style={{ color: "#ffffffaa" }} />
           <input
@@ -32,13 +45,18 @@ function Input() {
             type="text"
             placeholder={placeholderPhrases[currentTextIndex]}
             className={styles.input}
+            value={ingredientInput}
+            onChange={(e) => setIngredientInput(e.target.value)}
             required
           ></input>
-        <Link to='/recipe' className={styles.buttons}>
-            <button type="submit" className={styles.searchbtn}>Go</button>
-        </Link>
+          <div className={styles.buttons}>
+            <button type="submit" className={styles.searchbtn} onClick={emptyHandler}>Go</button>
+          </div>
         </div>
       </form>
+      {emptyInput && (
+        <p className={styles.errorBox}>Oops! Missing ingredients</p>
+      )}
     </div>
   )
 }

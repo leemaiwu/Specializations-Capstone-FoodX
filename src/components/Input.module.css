@@ -71,6 +71,20 @@ input:focus {
     color: rgb(226, 226, 226);
 }
 
+.errorBox {
+    position: absolute;
+    text-align: center;
+    width: 300px;
+    top: 55px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    color: rgb(255, 210, 210);
+    font-family: 'Poppins', 'Comfortaa';
+    letter-spacing: 1px;
+    z-index: 1;
+}
+
 @media screen and (max-width: 400px) {
     .input {
         width: 290px;
