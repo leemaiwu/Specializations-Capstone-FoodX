@@ -88,10 +88,14 @@
 }
 
 @media screen and (max-width: 400px) {
+  .header {
+    height: 105px;
+  }
+
   .title {
     font-size: 2.9rem;
     margin-left: -7px;
-}
+  }
 
   .icon {
     font-size: 48px;
