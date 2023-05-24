@@ -18,22 +18,27 @@ function RootLayout() {
     const options = {
       method: 'POST',
       body: JSON.stringify({
-        message: `You are a master chef with recipes from all around the world. I will provide you with ingredients that I have on hand and you will provide a recipe for a delicious dish based on the ingredients I provide below. You do not have to include every ingredient from my list but you will not add more besides spices. You will be concise and to the point with your response. Provide quantities for all ingredients, detailed directions, prep and cook time, and serving size. My ingredients: ${ingredientInput}`
+        message: `You are a skilled chef with knowledge of cuisines from around the world. Please create a delicious recipe using the following ingredients: ${ingredientInput}. The recipe should only include these ingredients, along with spices for seasoning. Please do not add any extra ingredients beyond what I listed. I would like you to provide quantities, step-by-step directions, prep and cook time, and serving size. Thank you!`
       }),
       headers: {
         'Content-Type': 'application/json'
       }
     }
     try {
-        const response = await fetch('http://localhost:8000/completions', options)
-        const data = await response.json()
-        console.log(data)
-        setIngredientInput('')
-        console.log(data.choices[0].message.content)
+      const response = await fetch('http://localhost:8000/completions', options)
+      const data = await response.json()
+      console.log(data)
+      setIngredientInput('')
+      if (data.choices && data.choices.length > 0) {
         setRecipeResponse(data.choices[0].message.content)
-    } catch (error) {
-        console.log(error)
-    }
+      } else if (data.error && data.error.message) {
+        setRecipeResponse(data.error.message)
+      } else {
+        setRecipeResponse(null)
+      }
+      } catch (error) {
+          console.log(error)
+      }
   }
 
   return (
