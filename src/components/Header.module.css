@@ -9,7 +9,7 @@
     align-items: center;
     justify-content: center;
     gap: 8px;
-    height: 120px;
+    height: 125px;
     opacity: 0;
     animation: fadeIn 2s ease-in-out forwards;
 }
@@ -34,9 +34,8 @@
   .icon {
     background: linear-gradient(to bottom, rgb(0, 0, 0), rgb(0, 0, 0), rgb(0, 0, 0), rgb(255, 189, 216));
     border-radius: 50px;
+    font-size: 67px;
     animation: colorRotation 5s ease-in-out infinite;
-    transition: all 30s ease-in-out;
-    font-size: 60px;
     margin-left: -8px;
   }
 
@@ -78,8 +77,8 @@
   
   
 .title {
-    font-size: 3.5rem;
-    /* letter-spacing: 1px; */
+    font-size: 4rem;
+    letter-spacing: -1px;
     /* font-family: 'Comfortaa', cursive; */
     /* font-family: 'Gruppo', cursive; */
     font-family: 'Lexend Peta', sans-serif;
@@ -94,10 +93,10 @@
 
   .title {
     font-size: 2.9rem;
-    margin-left: -7px;
+    margin-left: -8px;
   }
 
   .icon {
-    font-size: 48px;
+    font-size: 53px;
   }
 }

@@ -53,9 +53,18 @@ function RecipeCard({ingredientInput}) {
           <p>{`Cooking with: ${ingredientInput}`}</p>
           <br />
           {loading ? (
-            <p>
-              Fetching your recipe... <br /> <br /> Rememeber, you are the chef! Alter your recipe as needed.
-            </p>
+            <>
+              <p>
+                Rememeber, you are the chef! Alter your recipe as needed. <br /> <br /> Fetching your recipe...
+              </p>
+              <br />
+              <img src="https://drive.google.com/uc?export=view&id=1MZArw9g1XqHAKBYvbEzc6JkzKLdmwfCr" alt="Loading" />
+              <div className={styles.buttons}>
+                <Link to="/" type="button" className={styles.firstcloseBtn} onClick={handleClearRecipe}>
+                    Close
+                </Link>
+              </div>
+            </>
           ) : (
             <>
               {recipeLines.map((line, index) => (

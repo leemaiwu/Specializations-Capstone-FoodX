@@ -9,7 +9,6 @@ import RecipeContext from '../context/RecipeContext'
 function RootLayout() {
 
   const [ingredientInput, setIngredientInput] = useState('')
-
   const { setRecipeResponse } = useContext(RecipeContext)
 
   const submitHandler = async (e) => {
@@ -31,10 +30,8 @@ function RootLayout() {
       setIngredientInput('')
       if (data.choices && data.choices.length > 0) {
         setRecipeResponse(data.choices[0].message.content)
-      } else if (data.error && data.error.message) {
-        setRecipeResponse(data.error.message)
       } else {
-        setRecipeResponse(null)
+        setRecipeResponse("Sorry! An error occured, hit 'close'.")
       }
       } catch (error) {
           console.log(error)

@@ -59,6 +59,19 @@
     background-color: rgba(255, 255, 255, 0.125);
 }
 
+.firstcloseBtn {
+    color: rgb(193, 193, 193);
+    font-size: 1rem;
+    padding: 5px 0px;
+    font-family: 'Poppins';
+    text-decoration: none;
+}
+
+.firstcloseBtn:hover {
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+}
+
 .closeBtn {
     color: rgb(193, 193, 193);
     font-size: 1rem;

@@ -28,15 +28,15 @@
     display: flex;
     box-sizing: border-box;
     align-items: center;
-    border: 1px solid rgb(109, 109, 109);
+    border: 1.2px solid rgb(108, 108, 108);
     padding: 3px 13px;
     border-radius: 20px;
 }
 
 .input {
-    width: 380px;
+    width: 400px;
     height: auto;
-    height: 33px;
+    height: 35px;
     background: transparent;
     color: white;
     border: none;
