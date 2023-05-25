@@ -9,11 +9,12 @@
     color: white;
     min-width: 350px;
     max-width: 700px;
-    padding: 20px 50px;
+    padding: 25px 50px;
     height: fit-content;
     border: 1px solid rgb(109, 109, 109);
     border-radius: 30px;
-    background-color: rgba(255, 255, 255, 0.125);
+    font-size: 1.3rem;
+    background-color: rgba(255, 255, 255, 0.079);
 }
 
 .recipeText {
@@ -32,12 +33,16 @@
     width: 100%;
 }
 
+.gif {
+    width: 90%;
+}
+
 .buttons {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    gap: 20px;
-    margin: 10px 0px;
+    gap: 25px;
+    margin-top: 22px;
     /* padding: 0 50px; */
     width: 100%;
     font-family: 'Poppins';
@@ -48,7 +53,7 @@
     border: 1px solid rgb(109, 109, 109);
     background-color: rgba(255, 255, 255, 0.057);
     color: rgb(193, 193, 193);
-    font-size: 1rem;
+    font-size: 1.2rem;
     border-radius: 20px;
     padding: 8px 18px;
 }
@@ -61,7 +66,7 @@
 
 .firstcloseBtn {
     color: rgb(193, 193, 193);
-    font-size: 1rem;
+    font-size: 1.2rem;
     padding: 5px 0px;
     font-family: 'Poppins';
     text-decoration: none;
@@ -74,7 +79,7 @@
 
 .closeBtn {
     color: rgb(193, 193, 193);
-    font-size: 1rem;
+    font-size: 1.2rem;
     padding: 5px 0px;
     font-family: 'Poppins';
     text-decoration: none;
@@ -86,3 +91,11 @@
     /* text-decoration: underline;
     text-decoration-color: rgb(109, 109, 109); */
 }
+
+
+@media screen and (max-width: 400px) {
+     .gif {
+    width: 250px;
+    }
+}
+    

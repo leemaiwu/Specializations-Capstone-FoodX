@@ -55,15 +55,20 @@ function RecipeCard({ingredientInput}) {
           {loading ? (
             <>
               <p>
-                Rememeber, you are the chef! Alter your recipe as needed. <br /> <br /> Fetching your recipe...
+                Remember, you are the chef! Feel free to adjust the recipe to your preference.
               </p>
               <br />
-              <img src="https://drive.google.com/uc?export=view&id=1MZArw9g1XqHAKBYvbEzc6JkzKLdmwfCr" alt="Loading" />
-              <div className={styles.buttons}>
+              <img src="https://drive.google.com/uc?export=view&id=1MZArw9g1XqHAKBYvbEzc6JkzKLdmwfCr" alt="Loading" className={styles.gif} />
+              <br />
+              <br />
+              <p>
+                Fetching your recipe...
+              </p>
+              {/* <div className={styles.buttons}>
                 <Link to="/" type="button" className={styles.firstcloseBtn} onClick={handleClearRecipe}>
                     Close
                 </Link>
-              </div>
+              </div> */}
             </>
           ) : (
             <>
