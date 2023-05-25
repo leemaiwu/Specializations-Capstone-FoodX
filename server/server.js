@@ -1,4 +1,3 @@
-const PORT=8000
 
 const express = require('express')
 const cors = require('cors')
@@ -9,6 +8,7 @@ app.use(express.json())
 app.use(cors())
 
 require('dotenv').config()
+const PORT = process.env.PORT || 8000
 
 app.post('/completions', async (req, res) => {
     console.log(req.body.message)

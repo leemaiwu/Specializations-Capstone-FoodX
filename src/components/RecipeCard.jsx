@@ -14,6 +14,14 @@ function RecipeCard({ingredientInput}) {
 
   const {recipeResponse, setRecipeResponse} = useContext(RecipeContext)
   const [ loading, setLoading ] = useState(!recipeResponse)
+
+  // const gifLinks = [
+  //   'https://drive.google.com/uc?export=view&id=1MZArw9g1XqHAKBYvbEzc6JkzKLdmwfCr',
+  //   'https://drive.google.com/uc?export=view&id=1b9WNZ95bzHOlIFQ_136OySn9CRSgJEUp'
+  // ]
+
+  // const randomIndex = Math.floor(Math.random() * gifLinks.length)
+  // const gifRandom = gifLinks[randomIndex]
   
   useEffect(() => {
     setLoading(!recipeResponse)
@@ -58,7 +66,7 @@ function RecipeCard({ingredientInput}) {
                 Remember, you are the chef! Feel free to adjust the recipe to your preference.
               </p>
               <br />
-              <img src="https://drive.google.com/uc?export=view&id=1MZArw9g1XqHAKBYvbEzc6JkzKLdmwfCr" alt="Loading" className={styles.gif} />
+              <img src={'https://drive.google.com/uc?export=view&id=1MZArw9g1XqHAKBYvbEzc6JkzKLdmwfCr'} alt="Loading" className={styles.gif} />
               <br />
               <br />
               <p>

@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;700&family=Gruppo&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;700&family=Gruppo&family=Lexend+Peta:wght@100;200;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300&display=swap');
 
 .header {
     box-sizing: border-box;
@@ -36,7 +37,7 @@
     border-radius: 50px;
     font-size: 67px;
     animation: colorRotation 5s ease-in-out infinite;
-    margin-left: -8px;
+    /* margin-left: -8px; */
   }
 
   @keyframes colorRotation {
@@ -75,12 +76,14 @@
     }
   }
   
+
   
 .title {
     font-size: 4.2rem;
-    letter-spacing: -2px;
+    letter-spacing: -2.5px;
     /* font-family: 'Comfortaa', cursive; */
     /* font-family: 'Gruppo', cursive; */
+    /* font-family: 'Raleway', sans-serif; */
     font-family: 'Lexend Peta', sans-serif;
     font-weight: 300;
     margin: 0;
