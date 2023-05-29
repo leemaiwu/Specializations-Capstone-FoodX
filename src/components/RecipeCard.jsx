@@ -15,6 +15,7 @@ function RecipeCard({ingredientInput}) {
   const {recipeResponse, setRecipeResponse} = useContext(RecipeContext)
   const [ loading, setLoading ] = useState(!recipeResponse)
 
+  // Other loading modal gifs
   // const gifLinks = [
   //   'https://drive.google.com/uc?export=view&id=1MZArw9g1XqHAKBYvbEzc6JkzKLdmwfCr',
   //   'https://drive.google.com/uc?export=view&id=1b9WNZ95bzHOlIFQ_136OySn9CRSgJEUp'
