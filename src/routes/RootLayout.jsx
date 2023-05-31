@@ -11,9 +11,9 @@ function RootLayout() {
   const [ingredientInput, setIngredientInput] = useState('')
   const { setRecipeResponse } = useContext(RecipeContext)
 
-  const submitHandler = async (e) => {
+  const submitHandler = async () => {
     console.log(ingredientInput)
-
+    
     const options = {
       method: 'POST',
       body: JSON.stringify({
