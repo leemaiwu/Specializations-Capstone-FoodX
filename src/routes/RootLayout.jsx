@@ -3,6 +3,7 @@ import { useState, useContext } from 'react'
 
 import Header from '../components/Header'
 import Input from '../components/Input'
+import Footer from '../components/Footer'
 import styles from './RootLayout.module.css'
 import RecipeContext from '../context/RecipeContext'
 
@@ -49,6 +50,7 @@ function RootLayout() {
           setIngredientInput={setIngredientInput} 
         />
       </div>
+      <Footer/>
       <Outlet />
     </>
   )

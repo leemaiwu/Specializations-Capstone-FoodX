@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+.footer {
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /* top: 100%; */
+    bottom: 0;
+    color: white;
+    font-family: 'Poppins';
+    font-weight: 200;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    background-color: rgb(8, 8, 8);
+    height: 50px;
+    animation: fadeIn 1.5s ease-in-out 1s forwards;
+    opacity: 0;
+    z-index: 3;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(0px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .footer {
+        font-size: 0.75rem;
+        height: 45px;
+    }
+}
