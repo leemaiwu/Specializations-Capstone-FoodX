@@ -34,6 +34,14 @@
   margin-left: -8px;
 } */
 
+.closeInfo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 110%;
+  height: 100%;
+}
+
 .menuIcon {
   display: flex;
   position: absolute;
@@ -46,11 +54,14 @@
   cursor: pointer;
   background-color: rgba(220, 233, 245, 0.086);
   border-radius: 50%;
+}.menuIconActive {
+  background-color: rgba(220, 233, 245, 0.086);
+  border-radius: 50%;
 }
 
 .menuInfo {
   display: flex;
-  position: fixed;
+  position: absolute;
   flex-direction: column;
   text-align: center;
   width: 410px;

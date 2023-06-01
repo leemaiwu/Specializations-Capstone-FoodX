@@ -17,10 +17,15 @@ function Header() {
         setShowMenu(((prevMenuState) => !prevMenuState))
     }
 
+    const hideMenu = () => {
+        setShowMenu(false)
+    }
+
     return (
         <div>
+            <div className={styles.closeInfo} onClick={hideMenu} />
             <div onClick={toggleMenu}>
-                <AiOutlineMenu className={styles.menuIcon} />
+                <AiOutlineMenu className={`${styles.menuIcon} ${showMenu ? styles.menuIconActive : ''}`} />
             </div>
             {showMenu && (
                 <div className={styles.menuInfo}>
