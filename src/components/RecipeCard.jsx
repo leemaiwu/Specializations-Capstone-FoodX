@@ -6,23 +6,15 @@ import 'jspdf-autotable'
 import RecipeContext from '../context/RecipeContext'
 import Modal from './Modal'
 import styles from './RecipeCard.module.css'
+import logo from '../logo/tinyLogo.png'
 
 function RecipeCard({ingredientInput}) {
 
   const sectionRef = useRef()
   const navigate = useNavigate()
 
-  const {recipeResponse, setRecipeResponse} = useContext(RecipeContext)
-  const [ loading, setLoading ] = useState(!recipeResponse)
-
-  // Other loading modal gifs
-  // const gifLinks = [
-  //   'https://drive.google.com/uc?export=view&id=1MZArw9g1XqHAKBYvbEzc6JkzKLdmwfCr',
-  //   'https://drive.google.com/uc?export=view&id=1b9WNZ95bzHOlIFQ_136OySn9CRSgJEUp'
-  // ]
-
-  // const randomIndex = Math.floor(Math.random() * gifLinks.length)
-  // const gifRandom = gifLinks[randomIndex]
+  const { recipeResponse, setRecipeResponse } = useContext(RecipeContext)
+  const [loading, setLoading] = useState(!recipeResponse)
   
   useEffect(() => {
     setLoading(!recipeResponse)
@@ -35,17 +27,29 @@ function RecipeCard({ingredientInput}) {
     if (!section) return
 
     const pdf = new jsPDF()
+    pdf.setFontSize(14)
+    pdf.setFont('helvetica', 'bold')
+    pdf.setTextColor(0, 0, 0)
+
+    const appName = "FoodX Recipe"
+    const textWidth = pdf.getTextWidth(appName)
+
+    const pageWidth = pdf.internal.pageSize.getWidth()
+    const centerX = (pageWidth - textWidth) / 2
+
+    pdf.addImage(logo, 'PNG', 81, 8, 10, 10)
+    pdf.text(appName, centerX + 2, 15)
+
     pdf.setFontSize(12)
     pdf.setFont('helvetica', 'normal')
-    pdf.setTextColor(0, 0, 0)
 
     const elements = Array.from(section.getElementsByTagName('p'))
     const lines = elements.map((element) => element.textContent.trim())
 
-    const pageWidth = pdf.internal.pageSize.getWidth() - 20
-    const wrappedLines = pdf.splitTextToSize(lines, pageWidth)
+    const contentWidth = pdf.internal.pageSize.getWidth() - 20
+    const wrappedLines = pdf.splitTextToSize(lines, contentWidth)
 
-    pdf.text(wrappedLines, 10, 20)
+    pdf.text(wrappedLines, 10, 28)
     pdf.save('foodx_recipe.pdf')
   }
 
@@ -63,7 +67,7 @@ function RecipeCard({ingredientInput}) {
           <br />
           {loading ? (
             <>
-              <p>
+              <p className={styles.chefMessage}>
                 Remember, you are the chef! Feel free to adjust the recipe to your preference.
               </p>
               <br />

@@ -18,8 +18,9 @@ app.post('/completions', sendIngredients)
 // sequelize.sync({force: true})
 sequelize.sync()
     .then(() => {
-        app.listen((PORT), () => console.log(`Port running on ${PORT}`))
+        app.listen(PORT, () => console.log(`Port running on ${PORT}`))
     })
     .catch((err) => {
         console.log(err)
+        process.exit(1)
     })
