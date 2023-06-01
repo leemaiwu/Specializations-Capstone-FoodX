@@ -1,19 +1,28 @@
 # FoodX
 
-## Overview
-Food Expert is a web app that simplifies cooking by generating personalized recipes based on the ingredients you already have. With a user-friendly interface, input ingredients you have on hand, and the AI-powered system will generate a recipe suggestion.
+## Home
+Food Expert is a web application that simplifies the cooking process by generating personalized recipes based on the ingredients you already have. With a user-friendly interface and the power of artificial intelligence, Food Expert revolutionizes the way you approach recipes, unlocking the full potential of your pantry treasures.
 
-![FoodX Home](readme_img/FoodXHome.png)
-### Different Home Styling
-![FoodX Home](readme_img/FoodXHomeColor.png)
+![FoodX Home](https://github.com/leemaiwu/Specializations-Capstone-FoodX/blob/main/readme_img/FoodX-Home.png?raw=true)
 
-## MVP
-- User Input - Input field where users can input the ingredients they have on hand. It allows users to add a single ingredient or multiple ingredients
+## Features
+- **Input Ingredients:** Enter the ingredients you have on hand into the intuitive interface.
+- **AI-Powered Recipe Generation:** Our advanced AI model, ChatGPT, utilizes its vast culinary knowledge to provide accurate and creative recipe suggestions tailored to your available ingredients.
+- **Recipe Downloads:** Save your favorite recipes by downloading them as PDFs for easy reference.
+- **Effortless Navigation:** Enjoy a seamless and intuitive user experience designed for simplicity and convenience.
 
-- OpenAI API Integration - Integrate ChatGPT’s API to send user inputs and retrieve recipe suggestions. Display the generated recipe on the web app
+## Recipe
+![FoodX Recipe](https://github.com/leemaiwu/Specializations-Capstone-FoodX/blob/main/readme_img/FoodX-Recipe.png?raw=true)
 
-- Responsive UI - Responsive and user-friendly interface that adapts to different screen sizes
+## Recipe
+![FoodX PDF](https://github.com/leemaiwu/Specializations-Capstone-FoodX/blob/main/readme_img/FoodX-PDF.png?raw=true)
 
+## Technologies Used
+- **Frontend:** React, CSS Modules
+- **Backend:**Node.js, Express.js, Sequelize
+- **Database:** bit.io
+- **AI Model:** OpenAI GPT-3.5
 
-## Data Modeling
-![FoodX Data Model](readme_img/data_modeling.png)
+## Author
+
+Laura Wu
