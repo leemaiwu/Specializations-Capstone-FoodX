@@ -30,16 +30,14 @@
 
 const express = require('express')
 const cors = require('cors')
-
 const app = express()
 
 app.use(express.json())
 
-// Configure CORS options
+// CORS options
 const corsOptions = {
   origin: 'https://foodx.onrender.com',
-  methods: 'POST',
-  optionsSuccessStatus: 200,
+  methods: ['POST'],
 }
 
 app.use(cors(corsOptions))
