@@ -5,7 +5,7 @@
 
 // app.use(express.json())
 // // app.use(cors())
-// app.use(cors({ origin: 'https://foodx.onrender.com' }));
+// app.use(cors({ origin: 'https://foodx.onrender.com' }))
 
 // require('dotenv').config()
 // const PORT = process.env.PORT || 8000
@@ -48,6 +48,12 @@ const PORT = process.env.PORT || 8000
 const { sendIngredients } = require('./controllers/ingredients')
 
 const { sequelize } = require('./util/database')
+
+// Add the following middleware before your API routes
+app.use((req, res, next) => {
+  res.setHeader('Access-Control-Allow-Origin', 'https://foodx.onrender.com')
+  next()
+})
 
 app.post('/completions', sendIngredients)
 
