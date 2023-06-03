@@ -22,7 +22,8 @@ function RootLayout() {
         ingredients: ingredientInput
       }),
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': 'https://foodx.onrender.com'
       }
     }
     try {
