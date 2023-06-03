@@ -34,7 +34,15 @@ const cors = require('cors')
 const app = express()
 
 app.use(express.json())
-app.use(cors())
+
+// Configure CORS options
+const corsOptions = {
+  origin: 'https://foodx.onrender.com',
+  methods: 'POST',
+  optionsSuccessStatus: 200,
+}
+
+app.use(cors(corsOptions))
 
 require('dotenv').config()
 const PORT = process.env.PORT || 8000
@@ -42,9 +50,6 @@ const PORT = process.env.PORT || 8000
 const { sendIngredients } = require('./controllers/ingredients')
 
 const { sequelize } = require('./util/database')
-
-// Enable CORS preflight
-app.options('/completions', cors())
 
 app.post('/completions', sendIngredients)
 
