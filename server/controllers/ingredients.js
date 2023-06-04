@@ -22,8 +22,7 @@ module.exports = {
         try {
             const ingredients = req.body.ingredients
             await Ingredients.create({ingredients})
-            // const response = await fetch('https://api.openai.com/v1/chat/completions', options)
-            const response = await fetch('https://foodx-server-gi6u.onrender.com/completions', options)
+            const response = await fetch('https://api.openai.com/v1/chat/completions', options)
             const data = await response.json()
             res.status(200).send(data)
         } catch (error) {
