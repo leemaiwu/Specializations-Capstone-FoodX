@@ -34,7 +34,6 @@ const app = express()
 
 app.use(express.json())
 
-// CORS options
 const corsOptions = {
   origin: 'https://foodx.onrender.com',
   methods: ['POST'],
@@ -49,7 +48,6 @@ const { sendIngredients } = require('./controllers/ingredients')
 
 const { sequelize } = require('./util/database')
 
-// Add the following middleware before your API routes
 app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', 'https://foodx.onrender.com')
   res.setHeader('Access-Control-Allow-Methods', 'POST')
