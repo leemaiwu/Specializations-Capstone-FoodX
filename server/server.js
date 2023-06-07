@@ -36,13 +36,13 @@ app.use(express.json())
 
 const corsOptions = {
   origin: 'https://foodx.onrender.com',
-  methods: ['post'],
+  methods: ['POST'],
 }
 
 app.use(cors(corsOptions))
 
 require('dotenv').config()
-const PORT = process.env.PORT || 8000
+const PORT = 8000
 
 const { sendIngredients } = require('./controllers/ingredients')
 
@@ -50,7 +50,7 @@ const { sequelize } = require('./util/database')
 
 app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', 'https://foodx.onrender.com')
-  res.setHeader('Access-Control-Allow-Methods', 'post')
+  res.setHeader('Access-Control-Allow-Methods', 'POST')
   next()
 })
 

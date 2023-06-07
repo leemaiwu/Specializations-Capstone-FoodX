@@ -16,7 +16,7 @@ function RootLayout() {
     console.log(ingredientInput)
     
     const options = {
-      method: 'post',
+      method: 'POST',
       body: JSON.stringify({
         message: `You are a skilled chef with knowledge of cuisines from around the world. Please create a delicious recipe using the following ingredients: ${ingredientInput}. The recipe should only include these ingredients, along with spices for seasoning. Please do not add any extra ingredients beyond what I listed. I would like you to provide quantities, step-by-step directions, prep and cook time, and serving size. Thank you!`,
         ingredients: ingredientInput
