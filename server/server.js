@@ -36,7 +36,7 @@ app.use(express.json())
 
 const corsOptions = {
   origin: 'https://foodx.onrender.com',
-  methods: ['POST'],
+  methods: ['post'],
 }
 
 app.use(cors(corsOptions))
@@ -50,7 +50,7 @@ const { sequelize } = require('./util/database')
 
 app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', 'https://foodx.onrender.com')
-  res.setHeader('Access-Control-Allow-Methods', 'POST')
+  res.setHeader('Access-Control-Allow-Methods', 'post')
   next()
 })
 
