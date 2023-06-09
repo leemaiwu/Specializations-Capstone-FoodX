@@ -40,6 +40,7 @@ const corsOptions = {
 }
 
 app.use(cors(corsOptions))
+// app.use(cors())
 
 require('dotenv').config()
 const PORT = 8000
