@@ -48,12 +48,6 @@ const { sendIngredients } = require('./controllers/ingredients')
 
 const { sequelize } = require('./util/database')
 
-app.use((req, res, next) => {
-  res.setHeader('Access-Control-Allow-Origin', 'https://foodx.onrender.com')
-  res.setHeader('Access-Control-Allow-Methods', 'POST')
-  next()
-})
-
 app.post('/completions', sendIngredients)
 
 sequelize
