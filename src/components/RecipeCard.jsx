@@ -93,7 +93,7 @@ function RecipeCard({ingredientInput}) {
                   Close
                 </Link>
                 <button onClick={handleDownload} className={styles.pdfBtn} >
-                  Download as PDF
+                  Download PDF
                 </button>
               </div>
             </>
