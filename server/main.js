@@ -8,7 +8,7 @@ app.use(cors())
 // app.use(cors({ origin: 'https://foodx.onrender.com' }))
 
 require('dotenv').config()
-const PORT = process.env.PORT || 8000
+const PORT = 8000
 
 const {sendIngredients} = require('./controllers/ingredients')
 
