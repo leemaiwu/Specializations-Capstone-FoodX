@@ -2,7 +2,7 @@
   "name": "foodex",
   "version": "0.1.0",
   "private": true,
-  "main": "server/server.js",
+  "main": "server/main.js",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -26,7 +26,6 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "dev": "nodemon server/server.js",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
