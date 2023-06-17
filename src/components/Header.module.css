@@ -10,7 +10,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: 12px;
   height: 135px;
   opacity: 0;
   animation: fadeIn 2s ease-in-out forwards;
