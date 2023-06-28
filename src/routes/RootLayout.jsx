@@ -32,7 +32,7 @@ function RootLayout() {
     }
     try {
       // const response = await fetch('http://localhost:3005/completions', options)
-      // const response = await fetch('https://foodx-server-ccgv.onrender.com/completions', options)
+      // No Go const response = await fetch('https://foodx-server-ccgv.onrender.com/completions', options)
       const response = await fetch('https://foodx-backend.onrender.com/completions', options)
       const data = await response.json()
       console.log(data)

@@ -32,6 +32,7 @@ function Input({ ingredientInput, submitHandler, setIngredientInput }) {
     } else {
       submitHandler()
       navigate('/recipe/' + encodeURIComponent(ingredientInput))
+      inputRef.current.blur();
     }
   }
 
@@ -50,8 +51,11 @@ function Input({ ingredientInput, submitHandler, setIngredientInput }) {
             required
           ></input>
           <div className={styles.buttons}>
-            <button type="submit" className={styles.searchbtn} onClick={emptyHandler}>Go</button>
+            <button type="submit" className={styles.goBtn} onClick={emptyHandler}>Go</button>
           </div>
+        </div>
+        <div className={styles.searchButton}>
+          <button type="submit" className={styles.searchBtn} onClick={emptyHandler}>Search</button>
         </div>
       </form>
       {emptyInput && (
