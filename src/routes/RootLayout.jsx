@@ -32,14 +32,15 @@ function RootLayout() {
     }
     try {
       // const response = await fetch('http://localhost:3005/completions', options)
-      const response = await fetch('https://foodx-server-ccgv.onrender.com/completions', options)
+      // const response = await fetch('https://foodx-server-ccgv.onrender.com/completions', options)
+      const response = await fetch('https://foodx-backend.onrender.com/completions', options)
       const data = await response.json()
       console.log(data)
       setIngredientInput('')
       if (data.choices && data.choices.length > 0) {
         setRecipeResponse(data.choices[0].message.content)
       } else {
-        setRecipeResponse("Sorry! An error occured, hit 'close'.")
+        setRecipeResponse("Sorry! An error occured, click 'close'.")
       }
       } catch (error) {
           console.log(error)
