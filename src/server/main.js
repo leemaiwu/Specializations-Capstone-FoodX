@@ -5,7 +5,7 @@ const app = express()
 
 app.use(express.json())
 app.use(cors())
-app.use(cors({ origin: 'https://foodx-server-ccgv.onrender.com' }))
+app.use(cors({ origin: 'https://foodx.onrender.com' }))
 
 require('dotenv').config()
 const PORT = 3005
