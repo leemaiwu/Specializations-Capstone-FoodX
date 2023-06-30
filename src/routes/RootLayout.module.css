@@ -6,10 +6,6 @@
     height: 100%;
     padding-top: 29vh;
     overflow-y: auto;
-    /* height: 95%; */
-    /* height: calc(98% - 62px); */
-    /* overflow-y: auto; */
-    /* padding-top: calc(50% - 560px); */
 }
 
 @media screen and (max-width: 400px) {
