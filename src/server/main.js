@@ -15,7 +15,7 @@ const {sequelize} = require('./util/database')
 
 app.post('/completions', sendIngredients)
 
-// sequelize.sync({force: true})
+sequelize.sync({force: true})
 sequelize.sync()
     .then(() => {
         app.listen(PORT, () => console.log(`Port running on ${PORT}`))
