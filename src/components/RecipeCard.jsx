@@ -90,7 +90,7 @@ function RecipeCard({ingredientInput}) {
               ))}
               <div className={styles.buttons}>
                 <Link to="/" type="button" className={styles.closeBtn} onClick={handleClearRecipe}>
-                  Close
+                  Try Another Recipe 
                 </Link>
                 <button onClick={handleDownload} className={styles.pdfBtn} >
                   Download PDF

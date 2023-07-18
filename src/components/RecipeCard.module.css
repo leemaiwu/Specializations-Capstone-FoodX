@@ -28,7 +28,6 @@
 }
 
 .chefMessage {
-    text-align: center;
     font-size: 1.8rem;
     font-family: 'Poppins';
     letter-spacing: 0.75px;
@@ -47,10 +46,11 @@
 
 .buttons {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
     gap: 25px;
-    margin-top: 22px;
+    margin-top: 27px;
+    margin-bottom: 5px;
     width: 100%;
     font-family: 'Poppins';
 }
@@ -86,6 +86,7 @@
 
 .closeBtn {
     display: inline-block;
+    text-align: center;
     position: relative;
     color: rgb(193, 193, 193);
     font-size: 1.2rem;

@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
-import { AiOutlineMenu } from "react-icons/ai"
+// import { AiOutlineMenu } from "react-icons/ai"
+import { BsInfoLg } from "react-icons/bs"
 import { FaGripfire } from "react-icons/fa"
 import styles from './Header.module.css'
 
@@ -25,7 +26,7 @@ function Header() {
         <div>
             <div className={styles.closeInfo} onClick={hideMenu} />
             <div onClick={toggleMenu}>
-                <AiOutlineMenu className={`${styles.menuIcon} ${showMenu ? styles.menuIconActive : ''}`} />
+                <BsInfoLg className={`${styles.menuIcon} ${showMenu ? styles.menuIconActive : ''}`} />
             </div>
             {showMenu && (
                 <div className={styles.menuInfo}>
