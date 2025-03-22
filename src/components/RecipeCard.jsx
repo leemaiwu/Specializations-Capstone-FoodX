@@ -16,10 +16,18 @@ function RecipeCard({ingredientInput}) {
 
   const { recipeResponse, setRecipeResponse } = useContext(RecipeContext)
   const [loading, setLoading] = useState(!recipeResponse)
+  const [canShowRecipe, setCanShowRecipe] = useState(false)
   
   useEffect(() => {
     setLoading(!recipeResponse)
   }, [recipeResponse])
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setCanShowRecipe(true)
+    }, 5000)
+    return () => clearTimeout(timer)
+  }, [])
 
   const recipeLines = recipeResponse ? recipeResponse.split('\n') : []
 
@@ -66,7 +74,7 @@ function RecipeCard({ingredientInput}) {
         <div className={styles.recipeText}>
           <p>{`Cooking with: ${ingredientInput}`}</p>
           <br />
-          {loading ? (
+          {loading || !canShowRecipe ? (
             <>
               <p className={styles.chefMessage}>
                 Remember, you are the chef! Feel free to adjust the recipe to your preference.
