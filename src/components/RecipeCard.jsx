@@ -1,12 +1,13 @@
-import { useRef, useContext, useState, useEffect } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
-import jsPDF from 'jspdf'
 import 'jspdf-autotable'
 
-import RecipeContext from '../context/RecipeContext'
+import { Link, useNavigate } from 'react-router-dom'
+import { useContext, useEffect, useRef, useState } from 'react'
+
 import Modal from './Modal'
-import styles from './RecipeCard.module.css'
+import RecipeContext from '../context/RecipeContext'
+import jsPDF from 'jspdf'
 import logo from '../logo/tinyLogo.png'
+import styles from './RecipeCard.module.css'
 
 function RecipeCard({ingredientInput}) {
 
@@ -75,7 +76,8 @@ function RecipeCard({ingredientInput}) {
                 Fetching your recipe...
               </p>
               <br />
-              <img src={'https://drive.google.com/uc?export=view&id=1MZArw9g1XqHAKBYvbEzc6JkzKLdmwfCr'} alt="Loading" className={styles.gif} />
+              {/* <img src={'https://drive.google.com/uc?export=view&id=1MZArw9g1XqHAKBYvbEzc6JkzKLdmwfCr'} alt="Loading" className={styles.gif} /> */}
+              <img src={'https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExMzQxdmI5ajNjbWxhMXU4dzN6eGs2bGFvaGc3N2h6dDhhYTh0dmVlOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/MeJCaI3mSRTcqyCSw8/giphy.gif'} alt="Loading" className={styles.gif} />
               <br />
               {/* <div className={styles.buttons}>
                 <Link to="/" type="button" className={styles.firstcloseBtn} onClick={handleClearRecipe}>
