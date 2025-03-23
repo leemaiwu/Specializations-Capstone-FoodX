@@ -44,7 +44,7 @@ function RootLayout() {
         'Content-Type': 'application/json'
       }
     }
-    console.log(options.body)
+    // console.log(options.body)
     try {
       // const response = await fetch('http://localhost:3005/completions', options)
       const response = await fetch('https://foodx-backend.onrender.com/completions', options)
