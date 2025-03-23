@@ -2,9 +2,11 @@ import styles from './Footer.module.css'
 
 function Footer() {
 
+    const currentYear = new Date().getFullYear()
+
     return (
         <div className={styles.footer}>
-            <p>© FoodX 2023</p>
+            <p>© FoodX {currentYear}</p>
         </div>
     )
 }
